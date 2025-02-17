@@ -16,14 +16,15 @@ Extract the archive and note the folder path (e.g., C:\pgbench\). Mostly if you 
 
 📂 2. Setting Up pgbench
 
-Locate pgbench.exe in the extracted folder:
+Locate pgbench.exe in the extracted folder and save the location for later use.
 
 ⚙️ 3. Running pgbench with PowerShell
 
 Example: Running a pgbench Benchmark on AWS RDS PostgreSQL
 
-$env:PGPASSWORD = "yourpassword"
-& "C:\pgbench\pgsql\bin\pgbench.exe" -h your-db-hostname -p 5432 -U postgres -d yourdatabase -c 50 -j 4 -t 30 
+$env:PGPASSWORD = "XXXXX" 
+& "C:\Users\xxxxx\Desktop\xxxxxxxx\xxxxxxxx\postgresql-17.3-1-windows-x64-binaries\pgsql\bin\pgbench.exe" -h postgresqlinstancestack.cpesy4o6old1.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d Stackoverflow -f "C:\Users\Abhinav\Desktop\xxxxx\xxxxxx\Fundamentals_of_Vaccum\6-b-updating-users.sql" -c 50 -j 4 -t 30
+
 
 Explanation of Parameters:
 
